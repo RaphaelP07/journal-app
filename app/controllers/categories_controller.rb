@@ -2,7 +2,7 @@ class CategoriesController < ApplicationController
   before_action :set_category, only: %i[ show edit update destroy ]
 
   def index
-    @category = Category.all
+    @categories = Category.all
   end
 
   def new
@@ -12,7 +12,7 @@ class CategoriesController < ApplicationController
   def create
     @category = Category.new(category_params)
     if @category.save
-      redirect_to "/categories/new"
+      redirect_to "/categories"
     end
   end
 
