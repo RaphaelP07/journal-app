@@ -33,6 +33,10 @@ class CategoriesController < ApplicationController
     redirect_to "/categories"
   end
 
+  def today
+    @task = Task.where(date: Date.today)
+  end
+
   private
 
   def set_category

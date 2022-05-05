@@ -1,8 +1,8 @@
 %p{:style => "color: green"}= notice
-= render @task
+= render "details"
 %div
   = link_to "Edit this task", edit_category_task_path(@task)
   |
-  \#{link_to "Back to category tasks", category_tasks_path}
-  
-  \#{button_to "Destroy this task", @task, method: :delete}
+  \#{link_to "Back to #{@category.title} Tasks", category_tasks_path}
+%br 
+  \#{button_to "Delete task", [@category, @task], method: :delete}

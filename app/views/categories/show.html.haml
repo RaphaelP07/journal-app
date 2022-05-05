@@ -3,6 +3,8 @@
 %div
   = link_to "Edit this category", edit_category_path(@category)
   |
+  \#{link_to "Show tasks", "/categories/#{@category.id}/tasks"}
+  |
   \#{link_to "Back to categories", categories_path}
-  
+%br
   \#{button_to "Destroy this category", @category, method: :delete}

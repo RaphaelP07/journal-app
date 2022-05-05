@@ -1,0 +1,15 @@
+%div{:id => "#{dom_id @task}"}
+  %p
+    %h2 #{@task.name}
+  %p
+    %strong Date:
+    = @task.date
+  %p
+    %strong Time:
+    = @task.time == nil ? @task.time : @task.time.strftime("%R")
+  %p
+    %strong Location:
+    = @task.location
+  %p
+    %strong Notes:
+    = @task.notes

@@ -1,16 +1,5 @@
 %div{:id => "#{dom_id task}"}
-  %p
-    %strong Name:
-    = task.name
-  %p
-    %strong Date:
-    = task.date
-  %p
-    %strong Time:
-    = task.time
-  %p
-    %strong Location:
-    = task.location
-  %p
-    %strong Notes:
-    = task.notes
+  %tr
+    %td #{task.name}
+    %td #{task.date}
+    %td #{link_to "Details", "/categories/#{@category.id}/tasks/#{task.id}"}
