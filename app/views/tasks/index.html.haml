@@ -1,0 +1,8 @@
+%p{:style => "color: green"}= notice
+%h1 Categories
+#categories
+  - @tasks.each do |task|
+    = render task
+    %p
+      = link_to "Show this task", category_task
+= link_to "New task", new_category_task_path
