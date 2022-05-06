@@ -15,7 +15,7 @@ class TasksController < ApplicationController
 
   def create
     @task = @category.tasks.build(task_params)
-    if @task.save!
+    if @task.save
       redirect_to category_tasks_path
     else
       render :new
