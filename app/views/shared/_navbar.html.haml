@@ -10,7 +10,7 @@
         %li.nav-item
           = link_to "Today's tasks", today_tasks_path, class: 'nav-link'
         %li.nav-item
-          = button_to 'Sign-out', destroy_user_session_path, method: :delete, class: 'nav-link'
+          = button_to 'Sign-out', destroy_user_session_path, method: :delete, class: 'nav-link btn-sm'
       - else
         %li.nav-item
           = link_to 'Register', new_user_registration_path, class: 'nav-link'

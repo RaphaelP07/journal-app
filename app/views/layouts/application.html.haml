@@ -11,6 +11,9 @@
     = javascript_importmap_tags
   %body
     = render "shared/navbar"
-    %p{:class => "notice"}= notice 
-    %p{:class => "alert"}= alert
+    -flash.each do |type, msg|
+      -if type == "notice"
+        %p{:class => "alert alert-success"}= notice
+      -else type == "alert"
+        %p{:class => "alert alert-danger"}= alert
     .px-3= yield
