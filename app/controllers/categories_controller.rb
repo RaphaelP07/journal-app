@@ -34,7 +34,9 @@ class CategoriesController < ApplicationController
   end
 
   def today
-    @task = Task.where(date: Date.today)
+    @tasks = Task.where(date: Date.today).sort_by {
+      |task| task.time
+    }
   end
 
   private

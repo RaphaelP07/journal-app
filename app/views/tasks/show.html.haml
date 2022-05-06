@@ -4,5 +4,7 @@
   = link_to "Edit this task", edit_category_task_path(@task)
   |
   \#{link_to "Back to #{@category.title} Tasks", category_tasks_path}
+  |
+  \#{link_to "Back to Today's Tasks", today_tasks_path}
 %br 
   \#{button_to "Delete task", [@category, @task], method: :delete}
