@@ -3,7 +3,9 @@ class TasksController < ApplicationController
   before_action :get_category
 
   def index
-    @tasks = @category.tasks
+    @tasks = @category.tasks.sort_by {
+      |task| task.date
+    }
   end
 
   def new
