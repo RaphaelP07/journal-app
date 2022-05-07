@@ -1,21 +1,22 @@
-%h1 Today's Tasks
-%table 
-  %thead 
-    %tr
-      %td 
-        %strong Category
-      %td 
-        %strong Task
-      %td 
-        %strong Time
-      %td 
-        %strong Actions
-  %tbody
-    - @tasks.each do |task| 
+.show-container
+  %h1 Today's Tasks
+  %table 
+    %thead 
       %tr
-        %td #{task.category.title}
-        %td #{task.name}
-        %td #{task.time.to_s(:time)}
-        %td #{link_to "Details", "/categories/#{task.category_id}/tasks/#{task.id}"}
-%br
-#{link_to "Back to Categories", categories_path}
+        %td 
+          %strong Category
+        %td 
+          %strong Task
+        %td 
+          %strong Time
+        %td 
+          %strong Actions
+    %tbody
+      - @tasks.each do |task| 
+        %tr
+          %td #{task.category.title}
+          %td #{task.name}
+          %td #{task.time.to_s(:time)}
+          %td #{link_to "Details", "/categories/#{task.category_id}/tasks/#{task.id}"}
+  %br
+  #{link_to "Back to Categories", categories_path}

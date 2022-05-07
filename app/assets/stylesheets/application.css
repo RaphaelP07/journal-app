@@ -28,11 +28,8 @@
 }
 
 .show-container {
-  display: flex;
-  justify-content: center;
-  width: fit-content;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  place-content: center;
 }
 
 .navbar {
