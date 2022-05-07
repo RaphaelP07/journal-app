@@ -16,4 +16,5 @@
         %p{:class => "alert alert-success"}= notice
       -else type == "alert"
         %p{:class => "alert alert-danger"}= alert
-    .px-3= yield
+    .container
+      .px-3= yield

@@ -1,4 +1,4 @@
-%div{:class => "card p-3 w-25 m-3", :id => "#{dom_id category}"}
+%div{:class => "card p-3 m-3", :id => "#{dom_id category}"}
   %p
     %strong Title:
     = category.title
@@ -6,5 +6,5 @@
     %strong Description:
     = category.description
   %p
-    = link_to "Show", category_tasks_path(category.id)
+    = button_to "Show", category_tasks_path(category.id), method: :get, class: 'btn-confirm'
 %br

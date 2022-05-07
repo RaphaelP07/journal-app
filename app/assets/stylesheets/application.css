@@ -13,3 +13,70 @@
  *= require_tree .
  *= require_self
  */
+
+.container {
+  width: 100vw;
+  height: 93vh;
+  margin-top: 2rem;
+  padding-bottom: 10vh;
+}
+
+.home-form-container {
+  display: grid;
+  place-content: center;
+  height: 80vh;
+}
+
+.show-container {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.navbar {
+  height: 7vh;
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.btn-sign-out {
+  background-color: rgb(255, 175, 175);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.btn-confirm {
+  background-color: rgb(220, 255, 199);
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+td, th {
+  width: fit-content;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  text-align: left;
+  border: solid 1px lightgray;
+}
+
+.form-container {
+  display: grid;
+  place-content: center;
+  background-color: rgb(246, 246, 246);
+  width: 20vw;
+  height: max-content;
+  border-radius: 15px;
+  border: 2px solid grey;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  width: 22%; 
+  background-color: rgb(246, 246, 246);
+}

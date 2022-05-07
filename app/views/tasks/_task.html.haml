@@ -2,4 +2,7 @@
   %tr
     %td #{task.name}
     %td #{task.date}
-    %td #{link_to "Details", "/categories/#{@category.id}/tasks/#{task.id}"}
+    %td 
+      = link_to "Details", "/categories/#{@category.id}/tasks/#{task.id}"
+      |
+      = link_to "Edit", edit_category_task_path(@category, task.id)

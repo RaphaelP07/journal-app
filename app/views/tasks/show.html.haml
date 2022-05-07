@@ -1,10 +1,11 @@
-%p{:style => "color: green"}= notice
-= render "details"
-%div
-  = link_to "Edit this task", edit_category_task_path(@category, @task)
-  |
-  \#{link_to "Back to #{@category.title} Tasks", category_tasks_path}
-  |
-  \#{link_to "Today's Tasks", today_tasks_path}
-%br 
-  \#{button_to "Delete task", [@category, @task], method: :delete}
+.show-container
+  %p{:style => "color: green"}= notice
+  = render "details"
+  %div
+    = link_to "Edit this task", edit_category_task_path(@category, @task)
+    |
+    \#{link_to "Back to #{@category.title} Tasks", category_tasks_path}
+    |
+    \#{link_to "Today's Tasks", today_tasks_path}
+  %br 
+    \#{button_to "Delete task", [@category, @task], method: :delete}

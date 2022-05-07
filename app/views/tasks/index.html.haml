@@ -1,13 +1,20 @@
 -# %p{:style => "color: green"}= notice
-%h1 #{@category.title} Tasks
-#categories
-%table
-  %tr
-    %th Name
-    %th Date
-  - @tasks.each do |task|
-    = render task
-%br
-= link_to "New task", new_category_task_path
-|
-= link_to "Back to categories", categories_path
+.show-container
+  %h1 #{@category.title} Tasks
+  #categories
+  %table
+    %tr
+      %th Name
+      %th Date
+      %th Actions
+    - @tasks.each do |task|
+      = render task
+  %br
+  .links
+    = link_to "Edit this category", edit_category_path(@category)
+    |
+    = link_to "New task", new_category_task_path
+    |
+    = link_to "Back to categories", categories_path
+  %br
+  #{button_to "Delete category", @category, method: :delete}

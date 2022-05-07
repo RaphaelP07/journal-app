@@ -1,6 +1,6 @@
 -# %p{:style => "color: green"}= notice
 %h1 Categories
-#categories.d-flex
+#categories.d-flex.flex-wrap
   - @categories.each do |category|
     = render category
 = button_to "New category", new_category_path, method: :get
