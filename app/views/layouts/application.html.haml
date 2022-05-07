@@ -13,8 +13,10 @@
     = render "shared/navbar"
     -flash.each do |type, msg|
       -if type == "notice"
-        %p{:class => "alert alert-success"}= notice
+        %p{:class => "alert alert-success position-absolute"}= notice
       -else type == "alert"
-        %p{:class => "alert alert-danger"}= alert
+        %p{:class => "alert alert-danger position-absolute"}= alert
     .container
       .px-3= yield
+      .line.mb-3
+      .footer © Raphael Padua, 2022

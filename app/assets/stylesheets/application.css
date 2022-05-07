@@ -15,16 +15,19 @@
  */
 
 .container {
+  display: flex;
+  flex-direction: column;
   width: 100vw;
-  height: 93vh;
+  height: 96vh;
   margin-top: 2rem;
   padding-bottom: 10vh;
+  align-items: center;
 }
 
 .home-form-container {
   display: grid;
   place-content: center;
-  height: 80vh;
+  height: 81vh;
 }
 
 .show-container {
@@ -75,4 +78,58 @@ td, th {
 .card {
   width: 22%; 
   background-color: rgb(246, 246, 246);
+}
+
+.line {
+  width: 30vw;
+  height: 0.3vw;
+  background-color: black;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.alert {
+  margin: 1rem
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.alert {
+  -webkit-animation: fadeout 4s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadeout 4s; /* Firefox < 16 */
+  -ms-animation: fadeout 4s; /* Internet Explorer */
+  -o-animation: fadeout 4s; /* Opera < 12.1 */
+  animation: fadeout 4s;
+  opacity: 0;
+}
+
+@keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 1; }
+  to   { opacity: 0; }
 }
