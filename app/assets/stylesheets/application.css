@@ -14,6 +14,11 @@
  *= require_self
  */
 
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
 .container {
   display: flex;
   flex-direction: column;
