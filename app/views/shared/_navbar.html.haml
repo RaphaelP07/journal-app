@@ -1,8 +1,8 @@
 %nav.navbar.navbar-expand-lg.navbar-light.bg-light.p-3
   %a.navbar-brand{:href => "/"} To-Do App
-  %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
-    %span.navbar-toggler-icon
-  #navbarNav.collapse.navbar-collapse
+  -# %button.navbar-toggler{"aria-controls" => "navbarNav", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarNav", "data-toggle" => "collapse", :type => "button"}
+  -#   %span.navbar-toggler-icon
+  #navbarNav
     %ul.navbar-nav.ms-auto
       - if user_signed_in?
         %li.nav-item
